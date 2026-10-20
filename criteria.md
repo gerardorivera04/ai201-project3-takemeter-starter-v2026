@@ -53,61 +53,59 @@ whether you hit them:
 
 ## 1.
 
-<!-- Your criterion. It must name a number. -->
-
+Overall accurancy is at least 0.65 on each of the three random seeds.
 
 
 **Why this target:**
 
-
+I chose 0.65 because random guessing would be about 0.33 accuracy, so a 0.65 value means the model is correct about twice as often as a coin-flip-style baseline. In addtion, the practice dataset is small and there some noticeable changes of accuracy across the seeds in the notebook.  
 
 ---
 
 ## 2.
 
-<!-- Your criterion. -->
+Every label has an F1 score of at least 0.50 on each of the three seeds.
 
 
 
 **Why this target:**
 
-
+I chose 0.50 because each label has about three examples in the practice test split, so one crucial mistake can change the label's F1 substantially. In addition, a stricter target such as 0.65 would be considered unstable with the small amount of test data available.
 
 ---
 
 ## 3.
 
-<!-- Your criterion. -->
-
+No single label makes up more than 50% of the full dataset.
 
 
 **Why this target:**
 
-
+A 50% maximum leaves room for some natural imbalance while preventing the model from learning to guess the largest class. 
 
 ---
 
 ## 4.
 
-<!-- Your criterion. -->
+The model agrees with the staff/reference labels on at least 75% of the agreement-check posts.
 
 
 
 **Why this target:**
 
-
+75% was chosen because the taxonomoy should generate agreement on most posts while continuing to allow some genuinely ambiguous examples.
 
 ---
 
 ## 5.
 
-<!-- Your criterion. -->
+The model's most-confident third of predictions has an accuracy of at least 0.75 and is at least 0.15 more accurate than its least-confident third.
 
 
 
 **Why this target:**
 
-
+Based on the notebook's contents, the notebook directly reports accuracy for the most-confident and the least-confident thirds, and having a 15-point gap would show that confidence provides useful ranking rather than just a number attached to every prediction. 
 
 ---
 
