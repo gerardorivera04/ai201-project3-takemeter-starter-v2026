@@ -46,6 +46,22 @@
 
 ---
 
+## Community Pick and Candidate Distinctions
+
+**Community:**
+Nintendo Switch 2 gaming subreddit (Public)
+
+**Candidate Distinction 1:**
+Concrete detail vs. general impression – Some posts name something checkable, such as a game title with a specific setting, a frame rate, a price, a firmware version, a storage figure, or an attached screenshot or link. Others stay at the level of "it runs great" or "the screen looks nice." You can point at the detail, or at its absence.
+
+**Candidate Distinction 2:**
+A claim with a reason vs. reaction/annoucement – Some posts state a position and give a "because" ("handheld mode is worth it for X, since Y"). Others only express a feeling ("so hyped!!") or relay a fact ("new trailer dropped") with no argument attached. This works well in the Discussion category, where the range between the two is probably widest.
+
+**Candidate Distinction 3:**
+Self-contained vs. dependent on the reader to fill gaps – Some posts supply their own context: what the person already tried, what they're comparing against, what they're trying to decide. Others make you guess ("Is it worth it?" with no budget, no games, no comparison). This should matter most in Question posts, where a self-contained post is much easier to answer well. 
+
+--- 
+
 ## Label Taxonomy
 
 <!-- Each label: a one-sentence definition and two real examples from your
@@ -57,31 +73,78 @@
 ### `label_one`
 
 **Definition:**
+Question – The poster lacks information or experience and is asking the community to supply it, so a natural reply answers.
 
 **Example 1:**
->
+>How was your experience with competitive games on Switch 2? (Rocket League, EA FC)
+
+​Hi everyone,
+
+​I’ve been a huge fan of the Switch from afar since 2017, even though I’ve never owned one myself. Lately, I’ve been researching options for a portable gaming setup to take with me during my studies for dorm room gaming. Among options like laptops and other consoles, the Switch 2 caught my eye with its amazing next-gen design.
+
+​My gaming preferences mostly revolves around popular online competitive games that are fun both solo and with friends. I especially love Rocket League and EA FC.
+
+​Other consoles are not only bulky themselves, but they also require a dedicated monitor, controller, and a bunch of extra accessories. The idea of playing my two favorite games natively in handheld mode on the Switch 2 sounds incredibly exciting!
+
+​I know the Switch 2 has an amazing library of exclusive games offering a wide variety of experiences, but I’m really curious about how it performs for competitive games:
+
+○ ​Handheld Experience & Ergonomics: Does playing in handheld mode get tiring or uncomfortable during long sessions? Do you run into issues like overheating or clumsy button layouts (e.g., fingers slipping or missed inputs)? If so, how do you fix them (grips, accessories, etc.)?
+
+○ ​Handheld vs. Docked: Do you prefer playing competitive games handheld, or do you find yourself needing to dock it to a screen?
+
+○ ​Overall Recommendation: Would you recommend the Switch 2 specifically for playing these types of competitive games under these conditions?
+
+​From the gameplay videos I've seen, the graphical performance looks great and games seem to run super smoothly. I’d love to hear your personal experiences, tips, and honest thoughts!
+
+​Thanks in advance, everyone!
+
+P.S. Sorry if this is a frequently asked question, just wanted to get some direct input from the community!
 
 **Example 2:**
->
+>Why did Nintendo Store reduce the price of my pre-order?
+
+So this was the pre-order prepayment processing email for my copy of the game, I bought the bundle, which includes the Ocarina Pin that totalled £61.98 and came with the spiritual stones as a bonus.
+
+This email doesn't show the Ocarina pin, but even if that wasn't there due to being out of stock, the cost of the physical version should still be £58.99. Instead, it shows a total of £50.79.
+
+Any ideas or anyone have the same thing happen?
 
 ### `label_two`
 
 **Definition:**
+Recommendation – The poster advises a choice or action based on judgment or preference, so a natural reply agrees or disagrees. 
+
+**Example 1:**
+>Any games you'd add or swap?
+
+Heya guys! I'm getting a Switch 2 at the end of October, and these are my thoughts for what I should get as a lineup to last me till new year (at least)! Any you think I'm particularly missing? Or any here you'd get rid of? :))
+
+**Example 2:**
+>Animal Crossing or Fantasy life i?
+
+Hello! I want to buy one of these. I tried with Pokopia, it is nice, but not for me, even if I like farming. I did a lot in TOTK. I sold Pokopia and now I want to get one of these. What do you recommend? Thanks!
+
+### 'label_three'
+
+**Definition:**
+Analysis – The poster reports a finding or explanation whose central claim can be verified against something concrete, which ranges from a screenshot, a video, or a stat, so a natural reply checks or confirms it.
 
 **Example 1:**
 >
 
 **Example 2:**
 >
+
 
 ### The hardest boundary
 
 **Which two labels:**
 
+
+
 **The decision rule I used every time:**
 <!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
      if the tone is heated." -->
-
 
 
 ---
