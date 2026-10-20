@@ -130,22 +130,26 @@ Hello! I want to buy one of these. I tried with Pokopia, it is nice, but not for
 Analysis – The poster reports a finding or explanation whose central claim can be verified against something concrete, which ranges from a screenshot, a video, or a stat, so a natural reply checks or confirms it.
 
 **Example 1:**
->
+>The Legend of Zelda: Ocarina of Time Commercial-Gameplay: Battle Scene [ENG SUB]
+
 
 **Example 2:**
->
+>Witcher 3 Remastered, patch improved image quality.
 
+Left is before patch 5.03 and right is with 5.03.
+
+Sharpness is increased and they have added extra settings in the menu.
 
 ### The hardest boundary
 
 **Which two labels:**
-
+Question and Recommendation
 
 
 **The decision rule I used every time:**
 <!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
      if the tone is heated." -->
-
+If the post names two or more specific options being weighed against each other, it’s recommendation, even if it is phrased as a question.
 
 ---
 
