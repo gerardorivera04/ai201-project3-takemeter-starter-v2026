@@ -41,7 +41,7 @@
 
 <!-- Your community, and what your classifier sorts posts into. Three or four
      sentences. -->
-
+     My build of TakeMeter classifies posts from a public Nintendo Switch 2 gaming subreddit into three categories: question, recommendation, and analysis. A community post contains a label based on the information or context that matches with one of the labels' definitions. For instance, a question asks the community for information or experience, a recommendation asks for or gives advice about a choice, and an analysis presents an observation or claim supported by a specific, checkable detail. Finally, the trained classifier can help organize Switch 2 community posts by identifying whether each post is primarily seeking information, presenting an evidence-based observation, or asking for advice. 
 
 
 ---
@@ -252,17 +252,18 @@ small-test-split warning.
 
 **Moment 1**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* I asked Claude's AI chat assistant to help me with brainstorming useful distinctions for classifying Nintendo Switch 2 subreddit posts as these distinctions had to be applied consistently to real posts rather than categories based on opinion. 
+- *What came back:* The AI tool suggested that I distinguish posts based on the following information: the post contains concrete details, the post includes a claim and a reason, or the post provides enough context for another person to respond. Thus, these suggestions did help me on how to differentiate between posts containing questions, recommendations, and evidence-based analysis.
+- *What I changed:* After being given some suggestions, I decided to adapt my distinctions to make sense for my chosen community so that I can create my three-label taxonomy for classifying the posts, which were question, recommendation, and analysis. Additionally, I wrote my label definitions, I found my examples that fit my labels, and I made a decision rule for a hard boundary between the question and the recommendation labels.
 
 **Moment 2**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* I asked Claude's AI assistant tool to help with pre-labeling a batch of Nintendo Switch 2 gaming subreddit posts using my three label definitions. 
+- *What came back:* The AI tool provided suggested labels for 180 posts. However, some suggestions were useful, but there were hard cases that needed my attention. For instance, the other suggestions were ambiguous or did not fully follow my decision rule, specifically when a post contained both a question and a recommendation or included a screenshot as evidence. 
+- *What I changed:* I manually read and checked every pre-labeled post. For instance, I corrected labels when the suggested label didn't match my definitions and recored the first 20 posts with a cold note due to labeling these posts without AI assistance. Thus, the final dataset contained 200 label posts, which included 180 posts marked as pre-labeled and checked.
 
 **Pre-labelling disclosure:**
+An AI tool was used to pre-label 180 of the 200 posts in the CSV labels file. Then, I manually reviewed and corrected every pre-labeled example when necessary. Additionally, the first 20 posts were labeled without AI assistance as these 20 posts were apart of a cold-labeling sample.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
