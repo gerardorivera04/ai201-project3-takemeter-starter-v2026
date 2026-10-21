@@ -208,16 +208,36 @@ I chose Question because the poster is experiencing an issue with their gaming c
 <!-- Your starting model, your settings, and anything you changed and why. -->
 
 **Base model:**
+distilbert-base-uncased
 
 **Settings:** <!-- epochs, learning rate, batch size, seed -->
+- Epochs: 3
+- Learning Rate: 2e-5
+- Batch Size: 16
+- Maximum Sequence Length: 128 tokens
+- Seed: 42
+- Device: Apple Silicon GPU (MPS)
+- PyTorch Version: 2.14.1
 
 **Anything I changed from the defaults, and why:**
+I didn't anything from the defaults during the training run.
 
 **Split sizes:** <!-- train / val / test, and per-label counts in the test
 split. If a label had fewer than about 8 in test, say so — it explains a lot
 of next unit's variance. -->
 
+The stratified split contained 139 training posts, 31 validation posts, and
+30 test posts.
 
+train 139  ·  val 31  ·  test 30
+
+label             train  val  test                          
+analysis           43   10    10
+question           53   12    11
+recommendation     43    9     9
+
+Each label did have at least 8 examples in the test split, so no label triggered the 
+small-test-split warning.
 
 ---
 
