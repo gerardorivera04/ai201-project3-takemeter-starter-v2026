@@ -159,18 +159,21 @@ If the post names two or more specific options being weighed against each other,
      cases. -->
 
 **Where the posts came from:**
+I collected 200 public posts from a Nintendo Switch 2 gaming subreddit.
 
 **How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
 Say so plainly — the disclosure is required, not penalised. -->
+I labelled the first 20 posts cold without pre-labels. Then, the remaining 180
+posts were pre-labelled, and checked each label on the posts to see if I had to correct any of them when neccessary.
 
 **Counts per label:**
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| Question | 76 | 38.0% |
+| Recommendation | 61 | 30.5% |
+| Analysis | 63 | 31.5% |
+| **Total** | **200** | **100%** |
 
 **Three hard cases**
 
@@ -179,25 +182,25 @@ Say so plainly — the disclosure is required, not penalised. -->
 
 **1.**
 > *The post:*
->
+>I’ve been looking into the Hyperion 3 controller for Switch 2 and I don’t understand why on the purple option the right joystick is so tiny. I’m not a gamer tbh so this could be a simple thing I just don’t get. Thanks y’all!! 😊
 > *Could have been:*
->
+>Question or Analyis
 > *I chose, because:*
-
+> I chose Analysis as the label for this post because she's presenting an observation for a specifc product, such as a controller, and curiosity is the core idea behind the post as the poster is open to learning more about the controller's shape rather than experiencing issues with the controller, such as its grip or its functionality.  
 **2.**
 > *The post:*
->
+>Those 2 games are one sale. I want to know about how performance on switch 2? Is there any blurry image or hard-to-read text because of the scaling from switch 1 game?
 > *Could have been:*
->
+>Question or Recommendation
 > *I chose, because:*
-
+>I chose Recommendation because the poster is asking questions to receive important information from other community members to make their personal decision as the situation requires the poster to pick one of two options, which are the two games that are on sale.
 **3.**
 > *The post:*
->
+>Is blur normal on handheld? I took pictures of scrolling
 > *Could have been:*
->
+>Question or Analyis
 > *I chose, because:*
-
+I chose Question because the poster is experiencing an issue with their gaming console and they need a response from other community members to find a solution to the issue. In addition, a screenshot is provided, but it's being presented as evidence to show what the issue looks like to the poster and for other community members. 
 ---
 
 ## The Training Run
