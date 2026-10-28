@@ -304,11 +304,11 @@ I ran the zero-shot baseline on the same 30 held-out posts twice. The first run 
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy is at least 0.65 on each of the three random seeds |  |  |  |  |  |
+| 2. Every label has an F1 score of at least 0.50 on each of the three seeds |  |  |  |  |  |
+| 3. No single label makes up more than 50% of the full dataset |  |  |  |  |  |
+| 4. The model agrees with the staff/reference labels on at least 75% of the agreement-check posts |  |  |  |  |  |
+| 5. The model's most-confident third of predictions has an accuracy of at least 0.75 and is at least 0.15 more accurate than its least-confident third |  |  |  |  |  |
 
 ### Confusion matrix
 
@@ -367,7 +367,7 @@ I ran the zero-shot baseline on the same 30 held-out posts twice. The first run 
      data/staff_taxonomy.md, not your own — so every argument below is made
      from those definitions and those decision rules. -->
 
-**Agreement rate:** ___ / 30 = ___%
+**Agreement rate:** 17 / 30 = 57%
 
 <!-- Nobody grades this number. A 60% who argues every disagreement from the
      stated rules beats a 95% who wrote "staff was right" nine times. Several
@@ -390,24 +390,226 @@ I ran the zero-shot baseline on the same 30 held-out posts twice. The first run 
      what you did across your own 200. -->
 
 **1.**
-> *The post:*
+> *The post:* “The club championship scoring changed in 2019 from top-6 to
+> top-10. Since then our B team has finished above the A team twice. That's not
+> depth improving, it's the scoring rewarding turnout.”
 >
-> *Staff said / I said:*
+> *Staff said / I said:* Staff said `analysis`; I said `hot_take`.
 >
-> *My call, and why:*
+> *My call, and why:* Staff is right. The post gives a named rule change and
+> two subsequent results, then uses those facts to distinguish improved depth
+> from a scoring effect. The facts are not decoration: without the scoring
+> change and the two finishes, the conclusion about turnout has no support.
+> I treated the confident wording as a hot take and under-applied Rule 1.
 >
-> *Which pile:*
+> *Which pile:* (a) The rule covered it and I applied it loosely.
 
 **2.**
-> *The post:*
+> *The post:* “Everyone blames the hill at 18 miles. I split the field into
+> people who ran the first half under 1:45 and over, and the slowdown after 18
+> was almost identical for both groups. If the hill were the problem the fast
+> starters would fall apart harder.”
 >
-> *Staff said / I said:*
+> *Staff said / I said:* Staff said `analysis`; I said `hot_take`.
 >
-> *My call, and why:*
+> *My call, and why:* Staff is right. This describes a comparison between two
+> defined groups and reports the observed result. That result is then used to
+> challenge the hill explanation, so the comparison carries the argument under
+> Rule 1. I focused on the opening general statement and missed that the test
+> and its result are the central evidence.
 >
-> *Which pile:*
+> *Which pile:* (a) The rule covered it and I applied it loosely.
+
+**3.**
+> *The post:* “Carbon plates aren't the whole story. My times dropped 2% in the
+> shoes and another 2% the following year in the same pair, when the only thing
+> that changed was going from 35 to 50 miles a week.”
+>
+> *Staff said / I said:* Staff said `analysis`; I said `hot_take`.
+>
+> *My call, and why:* Staff is right. The two percentage changes and the stated
+> change in weekly mileage provide a concrete comparison supporting the claim
+> that carbon plates are not the whole explanation. The opening sentence alone
+> would be a hot take, but the following measurements do argumentative work.
+> I treated the first sentence as the entire post instead of evaluating the
+> evidence that follows it.
+>
+> *Which pile:* (a) The rule covered it and I applied it loosely.
+
+**4.**
+> *The post:* “Checked the entry lists. 41% of this year's field have never run
+> the distance before, against 26% five years ago. That's why the finish-line
+> photos look different, not because standards dropped.”
+>
+> *Staff said / I said:* Staff said `analysis`; I said `hot_take`.
+>
+> *My call, and why:* Staff is right. The post names the source of the
+> information, gives two percentages from different years, and uses the
+> comparison to reject an alternative explanation. The statistics therefore
+> carry the conclusion rather than merely decorating it. I applied the
+> hot-take label because the conclusion sounds assertive, but Rule 1 is about
+> whether evidence supports the assertion, not whether the tone is confident.
+>
+> *Which pile:* (a) The rule covered it and I applied it loosely.
+
+**5.**
+> *The post:* “Ran the same loop in 4C and in 24C within a fortnight, same
+> effort by heart rate. 90 seconds slower in the heat over six miles. People
+> keep saying heat costs you 'a bit' and it's more than that.”
+>
+> *Staff said / I said:* Staff said `analysis`; I said `hot_take`.
+>
+> *My call, and why:* Staff is right. The same loop, two temperatures, matched
+> effort, distance, and 90-second difference form a concrete comparison. That
+> comparison is the reason for rejecting the claim that heat costs only a
+> little. Although the final sentence is general, the measured observation is
+> load-bearing under Rule 1, so I was wrong to treat the post as unsupported.
+>
+> *Which pile:* (a) The rule covered it and I applied it loosely.
+
+**6.**
+> *The post:* “Three of us ran the same session on the same day, different
+> shoes, within 10 seconds of each other over 5 miles. I'm not saying shoes do
+> nothing, but whatever they do was smaller than the noise between three
+> people.”
+>
+> *Staff said / I said:* Staff said `analysis`; I said `reaction`.
+>
+> *My call, and why:* Staff is right. This is not primarily a report of an
+> immediate feeling; it is a small comparison designed to support a
+> conclusion about shoe effects versus person-to-person variation. The same
+> session, distance, day, and 10-second spread are checkable details, and the
+> conclusion is explicitly based on them. Rule 3 says recency does not
+> override evidence, so I misused the personal voice as a reason to choose
+> reaction.
+>
+> *Which pile:* (a) The rule covered it and I applied it loosely.
+
+**7.**
+> *The post:* “If you need a gel before 90 minutes you have a fuelling
+> problem, not an energy problem.”
+>
+> *Staff said / I said:* Staff said `hot_take`; I said `reaction`.
+>
+> *My call, and why:* Staff is right. The post makes a general prescription
+> about runners and provides no account of something that just happened to the
+> writer. The 90-minute threshold is part of the unsupported rule being
+> asserted, not evidence offered to establish it. Under Rule 2, a general
+> claim is hot_take even if it is phrased conversationally. I confused the
+> direct, personal-sounding wording with a reaction.
+>
+> *Which pile:* (a) The rule covered it and I applied it loosely.
+
+**8.**
+> *The post:* “Every injury thread on this forum is the same injury and the
+> same three replies.”
+>
+> *Staff said / I said:* Staff said `hot_take`; I said `analysis`.
+>
+> *My call, and why:* Staff is right. The post asserts a sweeping pattern but
+> gives no thread examples, count, dates, or other observation that would let
+> the reader check it. “Every” makes the claim sound precise, but precision in
+> wording is not the same as supporting evidence. Because the stated pattern
+> is not shown to carry an argument, it remains an unsupported general claim
+> under Rule 1. I treated a potentially checkable assertion as an already
+> supplied fact.
+>
+> *Which pile:* (a) The rule covered it and I applied it loosely.
+
+**9.**
+> *The post:* “Got up at 5, drove ninety minutes, and it's cancelled. Standing
+> in the car park in the rain reading the email.”
+>
+> *Staff said / I said:* Staff said `reaction`; I said `analysis`.
+>
+> *My call, and why:* Staff is right. The details are a first-person account of
+> an event happening to the writer now: waking early, driving, receiving the
+> cancellation, and standing in the rain. They establish the situation and
+> feeling, but they do not support an argument or general explanation. Rule 3
+> makes the recency and personal experience decisive here. I mistook concrete
+> details for analytical evidence.
+>
+> *Which pile:* (a) The rule covered it and I applied it loosely.
+
+**10.**
+> *The post:* “First run back after eight weeks out. Two miles, slower than my
+> warm-up used to be, and I don't care even slightly.”
+>
+> *Staff said / I said:* Staff said `reaction`; I said `analysis`.
+>
+> *My call, and why:* Staff is right. The eight weeks, two miles, and pace
+> comparison describe the writer's return and the writer's attitude toward it.
+> No conclusion is drawn from those details and no claim about running in
+> general is argued. The measurable comparison is part of the personal report,
+> not load-bearing evidence for an argument, so Rule 3 places it in reaction.
+> I again used the presence of a number as a shortcut to analysis.
+>
+> *Which pile:* (a) The rule covered it and I applied it loosely.
+
+**11.**
+> *The post:* “Watching the last 400 of that and I had to stand up. Still
+> standing up actually.”
+>
+> *Staff said / I said:* Staff said `reaction`; I said `analysis`.
+>
+> *My call, and why:* Staff is right. This is an immediate physical and
+> emotional response to something the writer is watching. It contains no
+> checkable fact used to support a conclusion and no general claim about the
+> race. Under Rule 2 and Rule 3, the writer's immediate experience is a
+> reaction. I overread the specific “last 400” reference as evidence.
+>
+> *Which pile:* (a) The rule covered it and I applied it loosely.
+
+**12.**
+> *The post:* “Blew up at 20 with the pace band still in my hand like it was
+> going to help. Rough one.”
+>
+> *Staff said / I said:* Staff said `reaction`; I said `analysis`.
+>
+> *My call, and why:* Staff is right. “At 20” identifies where the writer's
+> own race went wrong, while the pace band and “rough one” describe the
+> immediate experience. The post does not use those details to explain a
+> broader running phenomenon or prove a claim. This is exactly the personal,
+> recent report described by Rule 3, not analysis.
+>
+> *Which pile:* (a) The rule covered it and I applied it loosely.
+
+**13.**
+> *The post:* “Someone handed my kid an orange slice at mile 22 and I have
+> been crying on and off since.”
+>
+> *Staff said / I said:* Staff said `reaction`; I said `analysis`.
+>
+> *My call, and why:* Staff is right. The mile marker and orange slice are
+> details in a personal account of an emotional moment. They do not function
+> as evidence for a claim; the point is the writer's immediate feeling. Rule 3
+> says that recency and personal experience outweigh the mere presence of a
+> concrete detail when no argument is being made. I incorrectly equated
+> specificity with analysis.
+>
+> *Which pile:* (a) The rule covered it and I applied it loosely.
 
 **What the pattern in my disagreements tells me:**
+
+Most of my disagreements were pile (a): I applied the staff rules
+inconsistently rather than encountering a completely missing definition. In
+the first five disagreements, I often treated a confident conclusion as a
+hot_take even when a comparison, measurement, or dated result was doing the
+argument's work. In the last eight, I over-weighted isolated concrete details
+or personal wording and failed to ask whether the post actually made an
+argument or instead reported an immediate personal experience. This shows a
+systematic tendency to treat any specific number or detail as analysis and to
+underuse the reaction label.
+
+The one case I found most defensible as an alternative reading was
+“Every injury thread on this forum is the same injury and the same three
+replies.” I ultimately accepted staff's hot_take label because the post gives
+no examples or count, but `analysis` is a reasonable reading if “same” is
+treated as a specific, checkable observation. I classify that boundary as
+pile (c): the written rule does not fully say how much evidence must be
+displayed for a broad observational claim. That ambiguity does not erase the
+larger pattern: 12 of 13 disagreements were consistency errors in applying
+rules that were already present.
 
 
 

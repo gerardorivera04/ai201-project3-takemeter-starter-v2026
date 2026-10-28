@@ -53,7 +53,7 @@ whether you hit them:
 
 ## 1.
 
-Overall accurancy is at least 0.65 on each of the three random seeds.
+Overall accuracy is at least 0.65 on each of the three random seeds.
 
 
 **Why this target:**
