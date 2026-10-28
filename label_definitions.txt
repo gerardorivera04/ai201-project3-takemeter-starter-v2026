@@ -7,4 +7,4 @@
 
 question: The poster lacks information or experience and is asking the community to supply it, so a natural reply answers.
 recommendation: The poster advises a choice or action based on judgment or preference, so a natural reply agrees or disagrees. 
-analysis: The poster reports a finding or explanation whose central claim can be verified against something concrete, which ranges from a screenshot, a video, or a stat, so a natural reply checks or confirms it.
+analysis: The poster reports a finding or explanation whose central claim is supported by a concrete, checkable detail, such as a screenshot, video, comparison, or stat; a standalone announcement, deal, personal update, or unsupported opinion is not analysis.
