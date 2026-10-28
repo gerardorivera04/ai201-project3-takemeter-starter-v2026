@@ -5,6 +5,6 @@
 #
 # Delete the examples below and put yours in.
 
-analysis: makes an argument backed by a specific, checkable fact
-hot_take: a confident claim with no support offered
-reaction: an immediate response to something that just happened
+question: The poster lacks information or experience and is asking the community to supply it, so a natural reply answers.
+recommendation: The poster advises a choice or action based on judgment or preference, so a natural reply agrees or disagrees. 
+analysis: The poster reports a finding or explanation whose central claim can be verified against something concrete, which ranges from a screenshot, a video, or a stat, so a natural reply checks or confirms it.

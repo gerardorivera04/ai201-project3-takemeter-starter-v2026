@@ -1,0 +1,184 @@
+{
+  "model": "facebook/bart-large-mnli",
+  "n": 30,
+  "seed": 42,
+  "held_out": true,
+  "used_definitions": false,
+  "scores": {
+    "n": 30,
+    "accuracy": 0.43333333333333335,
+    "f1_macro": 0.30324074074074076,
+    "per_label": {
+      "analysis": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 10
+      },
+      "question": {
+        "precision": 0.5238095238095238,
+        "recall": 1.0,
+        "f1": 0.6875000000000001,
+        "support": 11
+      },
+      "recommendation": {
+        "precision": 0.2222222222222222,
+        "recall": 0.2222222222222222,
+        "f1": 0.2222222222222222,
+        "support": 9
+      }
+    }
+  },
+  "predictions": [
+    {
+      "text": "The Legend of Zelda: Ocarina of Time Introduction Video [ENG SUB]",
+      "gold": "analysis",
+      "predicted": "recommendation"
+    },
+    {
+      "text": "So I bought a switch 2 the other day mainly just for the Zelda remake coming which is fine. Why I\u2019m worried is I hooked it up fast and just slid it into the dock. I only had it out once to play a game fast and didn\u2019t notice anything but I didn\u2019t look hard then back in the dock. Since then it\u2019s been popping up and I\u2019m reading everywhere that you absolutely need a screen protector because of the switch 2\u2019s soft screen film which scratches super easy. Especially going into the dock. Now I have the screen protector ordered on its way but it\u2019s been in the dock twice now. So I\u2019m scared to take it out and doing it only once more when it gets here to put the protector on. My question is how bad can it possibly be scratched from the dock? Are we talking so small of scratches you have to squint to see them from an angel in the light or can the dock give actual deep gashes? Are people over blowing the scratch issue or is this a real big issue?",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "Final fantasy X/X-2 HD remaster. I\u2019m at target right now and this game is on sale for $25. Is it worth it?",
+      "gold": "recommendation",
+      "predicted": "question"
+    },
+    {
+      "text": "Ive had my nintendo switch Oled for the past 3 years and it is still in great condition. I have both physical and digital games in my collection. I have been pondering on whether to sell it and upgrade it to the nintendo switch 2. I have seen feedbacks about the battery controller and such. Is this a good move for now or should I wait for further versions of the switch 2.",
+      "gold": "recommendation",
+      "predicted": "question"
+    },
+    {
+      "text": "I'm thinking about getting the Sony Bravia 9 II 75\" (mini led RGB) has anyone bought and tried the Switch 2 on it? If so how was the experience? MY family and I are cozy gamers wondering if games like Pokemon and Zelda work well while playing. Little worried since on some reviews it says 60FPS games have more of a blur window and Switch 2 does a lot of games in that FPS. Thanks!",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "Anybody notice lag after the most recent star fox update? most noticeable in space levels. I played the demo which is the original 1.0.0 version and I didn't get any lag so I know it isnt my switch 2 but it might be the software. I hard reset the switch 2 and everything and the lag is still there. anybody else have this issue?",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "I got my first switch 2 and I love it. Luckily I got a special deal on it and it's new!",
+      "gold": "analysis",
+      "predicted": "recommendation"
+    },
+    {
+      "text": "So I preordered the Zelda edition switch 2 (and got all the matching accessories as well) as I enjoyed the original N64 Zelda games and have played Mario kart and Lego Star Wars on my friends switch 1. The last time I played a Nintendo console was the N64 and GameCube of friends and other places. I thought it was time to get my own! I think this bunch should go well and last me a long while!",
+      "gold": "analysis",
+      "predicted": "recommendation"
+    },
+    {
+      "text": "Hi I wonder if Switch 2 is only for the few exclusive games. Recently Fire Emblem Fortune Weave and Xenoblades got my attention. Before I've only played like Pokemon games. I'm mostly gameplay first person. The console itself and games are kinda pricey and my main question is if the purchase would be justified to try and play these exclusives.",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "As per title is it even worth getting minecraft switch 2 version if it only allows 2gb storage like that's so bad why would they do that. If I play one minecraft world for like 2 years non stop won't that exceed 2gb?",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "Warhammer 40K: Boltgun on the Switch 2 Using Joycon Mouse mode. This is so fun with Joycon Mouse mode",
+      "gold": "analysis",
+      "predicted": "recommendation"
+    },
+    {
+      "text": "The last time I played Pok\u00e9mon it was on the Nintendo DS and GBA now I have the Switch what's the best Pok\u00e9mon for it? Thanks",
+      "gold": "recommendation",
+      "predicted": "question"
+    },
+    {
+      "text": "Recent purchases Which of these should I start out with? Still haven\u2019t began any of them yet.",
+      "gold": "recommendation",
+      "predicted": "question"
+    },
+    {
+      "text": "Are there any tweaks that can make jumping more responsive? I\u2019m using the pro controller but some of the jump puzzles especially in the DLC content are pretty much luck for me. Some of it definitely is due to how the sprint and jump buttons are mapped by default on the controller A and B.",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "Love playing this way. Some Emkay in the background while ~~I get my ass handed to me~~pound ass in Elden Ring. Also...cat can it get better? Anyone else have a nice setup? I'd love to see them.",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "Are you guys going to be getting it? I personally am and I am so excited to play I have been playing switch sports since when it first came out and I played Wii sports when I first played video games",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "I have a screen protector on my switch 2(tempered glass from dbrand) I've had it on since release day when I got it. I pulled it out of its dock today and noticed a weird mark on my screen and I'm not sure what it is or if it's fixable.It's distracting me when I play in handheld mode now Could I get some help identifying it or seeing if there is a fix. Thanks in advance.",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "Made the Switch 2 my main device! Before that I played for the last 3 years 70% Steam Deck and 30% Playstation 5 before that all Playstation generations were my main gaming devices but with the latest Sony experiences I decided to switch. I love the Switch 2 its the perfect hybrid console! I bought also many third party games I already owning on other platforms because the Switch 2 runs them so well. Pre ordered also new Switch Sports and Zelda OoT remake of course. The two top rows of Switch 1 games I already owned on my Switch 1.",
+      "gold": "analysis",
+      "predicted": "recommendation"
+    },
+    {
+      "text": "Witcher 3 Remastered patch improved image quality. Left is before patch 5.03 and right is with 5.03. Sharpness is increased and they have added extra settings in the menu.",
+      "gold": "analysis",
+      "predicted": "question"
+    },
+    {
+      "text": "i\u2019m wondering if these are any good? i was going to get a geekshare one off of amazon for 23$ but saw these at Walmart for only 10 does anyone have one of these? does it fit the switch okay and if so can you still dock it while it\u2019s on?",
+      "gold": "recommendation",
+      "predicted": "question"
+    },
+    {
+      "text": "Witcher 3 new update looks sharper on handheld. So the game is much sharper now on handheld!",
+      "gold": "analysis",
+      "predicted": "question"
+    },
+    {
+      "text": "Very are on some good shizz to think this price is reasonable",
+      "gold": "recommendation",
+      "predicted": "recommendation"
+    },
+    {
+      "text": "Title is self explanatory. I got a pre order from Wal-Mart on an odd Friday I had off. Just a random check and it was there. (Oct. 2) Saw a bunch of people mostly tik tok that were showing it started the shipping possess and now I got some FOMO. So just wondering if my fellow Walmart pre order peeps got any progress OoT came out when I just turned 15 and holds a few core memories in my heart so I'm excited!",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "I plan on getting a switch 2 in the next couple weeks. And I have a separate charge pack for a steam deck. I\u2019ve noticed that there is a grip case with a charge pack being sold online for the switch 2. Is it safe to use a separate charge pack for the switch 2 outside being a product authorized by Nintendo? Or does anyone here have one they use without any issues.",
+      "gold": "question",
+      "predicted": "question"
+    },
+    {
+      "text": "All of my pickups within the last month! Collecting physical media is very addicting lol",
+      "gold": "analysis",
+      "predicted": "question"
+    },
+    {
+      "text": "I'm fairly new to this genre and i can use some recommendations. I used to play ace attorney with my 3ds but emio was a new experience for me and i loved it. So i'd love to explore more of these genre.",
+      "gold": "recommendation",
+      "predicted": "recommendation"
+    },
+    {
+      "text": "Im thinking of buying a Nintendo switch 2 next month in preparation for the Ocarina of time remake and I was wondering for those of you that already own one. Is better/more convenient than the base switch? I have the first base Switch and have alot of cartridge games I still want to play. Can I still play my physical games on the switch 2 or is it download code only? Lastly I'll ask if your feeling like leaving any extra bits of advice on why getting a switch 2 is worth it id really appreciate it.\ud83d\ude01",
+      "gold": "recommendation",
+      "predicted": "question"
+    },
+    {
+      "text": "Nintendo Switch 2 at Very (UK) for \u00a3303!",
+      "gold": "analysis",
+      "predicted": "recommendation"
+    },
+    {
+      "text": "Those 2 games are one sale. I want to know about how performance on switch 2? Is there any blurry image or hard-to-read text because of the scaling from switch 1 game?",
+      "gold": "recommendation",
+      "predicted": "question"
+    },
+    {
+      "text": "Zelda Console Shipped!",
+      "gold": "analysis",
+      "predicted": "recommendation"
+    }
+  ]
+}

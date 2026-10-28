@@ -279,19 +279,21 @@ An AI tool was used to pre-label 180 of the 200 posts in the CSV labels file. Th
 
 | Measure | Baseline | Trained | Difference |
 |---|---|---|---|
-| Overall accuracy |  |  |  |
-| Macro F1 |  |  |  |
-| F1 — `label_one` |  |  |  |
-| F1 — `label_two` |  |  |  |
+| Overall accuracy | 0.433 | 0.567 | +0.133 |
+| Macro F1 | 0.303 | 0.514 | +0.211 |
+| F1 — `analysis` | 0.000 | 0.750 | +0.750 |
+| F1 — `question` | 0.688 | 0.625 | -0.063 |
+| F1 — `recommendation` | 0.222 | 0.167 | -0.056 |
 
 **What I predicted before I looked:**
 <!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
      prediction made afterwards isn't one. -->
+I predict that the trained model will achieve higher accuracy and macro F1 than the baseline with a major improvement in the identification of analysis posts.
 
 **What the gap actually means:**
 <!-- If the baseline matched your trained model, your fine-tuning added
      nothing — and that is a real finding, not a failure. Say it plainly. -->
-
+I ran the zero-shot baseline on the same 30 held-out posts twice. The first run of the baseline with my label definitions produced the following results, which had the accuracy being 0.400 and the macro F1 being 0.291. The second run of the baseline without the definitions, which used bare label names, produced results like the accuracy being 0.433 and the macro F1 being 0.303. Thus, the accuracy gap was -0.033, or -3.3 percentage points. For instance, the definitions didn't improve the baseline due to my label definitions being worth -3.3. percentage points of accuracy for this test split, and this negative result shows that the bare-names prompt performed slightly better. Despite the fact, the trained model stull outperformed both zero-shot runs, in which accuracy reached 0.567 and macro F1 reached 0.514.
 
 
 ---
