@@ -302,13 +302,15 @@ I ran the zero-shot baseline on the same 30 held-out posts twice. The first run 
 <!-- Five criteria across three seeds. The notebook's section 6 prints the
      spread table; the Target and Verdict columns are yours. -->
 
+## Run Log — Before
+
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
-|---|---|---|---|---|---|
-| 1. Overall accuracy is at least 0.65 on each of the three random seeds |  |  |  |  |  |
-| 2. Every label has an F1 score of at least 0.50 on each of the three seeds |  |  |  |  |  |
-| 3. No single label makes up more than 50% of the full dataset |  |  |  |  |  |
-| 4. The model agrees with the staff/reference labels on at least 75% of the agreement-check posts |  |  |  |  |  |
-| 5. The model's most-confident third of predictions has an accuracy of at least 0.75 and is at least 0.15 more accurate than its least-confident third |  |  |  |  |  |
+|---|---|---:|---:|---:|---|
+| 1. Overall accuracy is at least 0.65 on each of the three random seeds | ≥ 0.65 accuracy on every seed | 0.567 | 0.400 | 0.400 | MISSED |
+| 2. Every label has an F1 score of at least 0.50 on each of the three seeds | ≥ 0.50 F1 for every label on every seed | analysis 0.750; question 0.625; recommendation 0.167 | analysis 0.182; question 0.550; recommendation 0.000 | analysis 0.000; question 0.550; recommendation 0.200 | MISSED |
+| 3. No single label makes up more than 50% of the full dataset | Every label must be ≤ 50% of the dataset | analysis 63/200 = 31.5% | question 76/200 = 38.0% | recommendation 61/200 = 30.5% | MET |
+| 4. The model agrees with the staff/reference labels on at least 75% of the agreement-check posts | ≥ 75% agreement | 17/30 = 0.567 | 17/30 = 0.567 | 17/30 = 0.567 | MISSED |
+| 5. The most-confident third has accuracy of at least 0.75 and is at least 0.15 more accurate than the least-confident third | Top third ≥ 0.75 and gap ≥ 0.15 | top 0.600; bottom 0.500; gap 0.100 | top 0.300; bottom 0.300; gap 0.000 | top 0.600; bottom 0.100; gap 0.500 | MISSED |
 
 ### Confusion matrix
 
@@ -338,11 +340,11 @@ I ran the zero-shot baseline on the same 30 held-out posts twice. The first run 
 
 | # | Criterion | Target | Verdict | How I decided |
 |---|---|---|---|---|
-| 1 |  |  |  |  |
-| 2 |  |  |  |  |
-| 3 |  |  |  |  |
-| 4 |  |  |  |  |
-| 5 |  |  |  |  |
+| 1 | Overall accuracy is at least 0.65 on each of the three random seeds | ≥ 0.65 | MISSED | Accuracy was 0.567 for seed 42 and 0.400 for seeds 7 and 2024. Thus, no seed reached the 0.65 target that the criterion was missed. |
+| 2 | Every label has an F1 score of at least 0.50 on each of the three seeds | ≥ 0.50 F1 for every label on every seed | MISSED | The target required every label to reach at least 0.50 F1 on every seed. The recommendation F1 was 0.167, 0.000, and 0.200, while analysis fell below 0.50 on seeds 7 and 2024. |
+| 3 | No single label makes up more than 50% of the full dataset | Every label must be ≤ 50% of the dataset | MET | The largest label was question with 76 of 200 posts, or 38%. Since 38% is below the 50% maximum target, there wasn't a very dominant label. |
+| 4 | The model agrees with the staff/reference labels on at least 75% of the agreement-check posts | ≥ 75% agreement | MISSED | The agreement check produced 17 agreements out of 30 posts, or 56.7%. This is below the target of 75%, and the criteria was missed. |
+| 5 | The most-confident third has accuracy of at least 0.75 and is at least 0.15 more accurate than the least-confident third | Top third ≥ 0.75 and gap ≥ 0.15 | MISSED |  The most-confident third reached 0.600, 0.300, and 0.600 across the seeds, so it never reached the 0.75 target. Although seed 2024 had a 0.500 confidence gap, both requirements didn't hold, and the criteria was missed. |
 
 **Diagnoses**
 
@@ -355,7 +357,13 @@ I ran the zero-shot baseline on the same 30 held-out posts twice. The first run 
      have that can tell a LABELLING problem from a MODEL problem, and this
      section is graded on whether you used it that way. -->
 
+(i) Criteria 1 - The main cause is too few examples for the model to learn stable decision boundaries. The test split had only 30 posts, with 9–11 examples per label, and accuracy changed from 0.567 on seed 42 to 0.400 on seeds 7 and 2024. The agreement report also found 12 of 13 disagreements were cases where I applied the labeling rules inconsistently, so inconsistent training labels likely added noise. The large change across seeds shows that the model's accuracy was not stable enough to reach 0.65 on every run.
 
+(ii) Criteria 2 - The main causes are the genuinely difficult question/recommendation boundary and too few examples for each label. The recommendation F1 was 0.167, 0.000, and 0.200 across the three seeds, and the confusion matrix shows that 8 real recommendation posts were classified as questions. The test split contained only 9 recommendation posts, so a few errors caused a large F1 change. The agreement report also found repeated inconsistent application of labeling rules, which suggests that some training examples may not have represented the boundaries consistently.
+
+(iii) Criteria 4 - The cause was primarily a boundary that I applied inconsistently, with one additional genuinely ambiguous boundary. I agreed with the staff labels on only 17 of 30 posts, or 56.7%. In the agreement report, 12 of the 13 disagreements were cases where the written rule covered the example but I applied it too loosely, especially when I treated any specific number or detail as evidence for analysis. One remaining case was genuinely ambiguous because the rule did not clearly state how much evidence a broad observation must include. This shows that the missed agreement target was mainly a labeling-consistency problem rather than a model problem.
+
+(iv) Criteria 5 - The model did not learn a reliable relationship between confidence and correctness from this 200-example dataset. The most-confident third reached only 0.600, 0.300, and 0.600 across the three seeds, missing the 0.75 target every time. On seed 42, the average confidence when correct was 0.381 and when wrong was 0.378, which is almost identical; on seed 7, incorrect predictions were slightly more confident than correct predictions. The inconsistent labeling identified in the agreement report likely made calibration harder, and the small dataset was not enough for the model to produce dependable confidence rankings.
 
 ---
 
