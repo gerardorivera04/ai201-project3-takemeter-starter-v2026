@@ -295,7 +295,6 @@ I predict that the trained model will achieve higher accuracy and macro F1 than 
      nothing — and that is a real finding, not a failure. Say it plainly. -->
 I ran the zero-shot baseline on the same 30 held-out posts twice. The first run of the baseline with my label definitions produced the following results, which had the accuracy being 0.400 and the macro F1 being 0.291. The second run of the baseline without the definitions, which used bare label names, produced results like the accuracy being 0.433 and the macro F1 being 0.303. Thus, the accuracy gap was -0.033, or -3.3 percentage points. For instance, the definitions didn't improve the baseline due to my label definitions being worth -3.3. percentage points of accuracy for this test split, and this negative result shows that the bare-names prompt performed slightly better. Despite the fact, the trained model stull outperformed both zero-shot runs, in which accuracy reached 0.567 and macro F1 reached 0.514.
 
-
 ---
 
 ## Run Log — Before
@@ -316,17 +315,18 @@ I ran the zero-shot baseline on the same 30 held-out posts twice. The first run 
 <!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
      An image of a matrix earns nothing. -->
 
-| true \ predicted |  |  |  |
+| true \ predicted | analysis | question | recommendation |
 |---|---|---|---|
-| **** |  |  |  |
-| **** |  |  |  |
-| **** |  |  |  |
+| **analysis** | 6 | 3 | 1 |
+| **question** | 0 | 10 | 1 |
+| **recommendation** | 0 | 8 | 1 |
 
 **My biggest off-diagonal number, and what it means:**
 <!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
      direction. "7 real analysis posts were called hot_take and only 3 went the
      other way" is a direction, not just an error rate. -->
 
+8 real recommendation posts were classified as question, while only 1 real question post was classified as recommendation. Thus, this shows that the model confuses recommendation posts with question posts, and the model leans toward predciting the question label for this boundary.
 
 
 ---
