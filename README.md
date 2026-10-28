@@ -621,8 +621,6 @@ displayed for a broad observational claim. That ambiguity does not erase the
 larger pattern: 12 of 13 disagreements were consistency errors in applying
 rules that were already present.
 
-
-
 ---
 
 ## The Improvement
@@ -675,13 +673,18 @@ improvement.
 
 <!-- For each criterion still missed: what you'd do, and why you stopped. -->
 
-
+Criteria 1, 2, and 5 still need a larger and more consistently labeled
+training set; the three-seed results remain unstable, recommendation F1 is
+still weak, and confidence does not reliably track correctness. Criterion 4
+now passes the target, but the model was not retrained on the agreement sample
+because those posts use the staff taxonomy (`analysis`, `hot_take`, and
+`reaction`) rather than this project's labels.
 
 
 **The gap between what I meant my labels to capture and what the model
 learned:**
 <!-- Two sentences. Your confusion matrix is the evidence. -->
-
+I meant for my three labels to distinguish posts that seek information, advise a choice, or present evidence-based obersvations. The model learned that the question label was seen as a broad default as it labeled 8 out of 8 true recommendation posts as questions, while also misclassifying 3 analysis posts as questions. Thus, the model didn't reliably learn the intended boundary between advising, asking, and analyzing. 
 
 
 <!-- ═════════════════════════════════════════════════════════════════════
